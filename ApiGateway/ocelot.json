@@ -1,0 +1,32 @@
+{
+  "Routes": [
+    {
+
+      "DownstreamPathTemplate": "/api/res/{postId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/posts/{postId}",
+      "UpstreamHttpMethod": [ "Get" ]
+
+    },
+    {
+
+      "DownstreamPathTemplate": "/api/contact/{Id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/posts/{postId}",
+      "UpstreamHttpMethod": [ "Get", "Delete" ]
+
+    }
+  ]
+}
